@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --brown:#4A2E1A;--brown-mid:#7A4F34;--brown-light:#C4A882;--brown-pale:#F5EFE6;
+  --white:#FDFAF6;--red:#8B1A1A;--red-light:#C0392B;--text-dark:#2C1810;--text-mid:#6B4C38;
+}
+body{background:var(--white);font-family:'Jost',sans-serif;color:var(--text-dark);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(253,250,246,0.95);border-bottom:0.5px solid var(--brown-light);backdrop-filter:blur(8px)}
+.logo img{height:52px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links>a{text-decoration:none;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-mid);font-weight:400;transition:color 0.2s;padding-bottom:3px;border-bottom:1.5px solid transparent}
+.nav-links>a:hover,.nav-links>a.active{color:var(--red);border-bottom-color:var(--red)}
+.nav-lang{display:flex;gap:0.5rem;margin-left:1rem;border-left:0.5px solid var(--brown-light);padding-left:1.5rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--brown-light);font-family:'Jost',sans-serif;padding:2px 4px}
+.lang-btn.active{color:var(--red);border-bottom:1.5px solid var(--red)}
+
+.has-dropdown{position:relative}
+.dropdown{position:absolute;top:calc(100% + 1.2rem);left:50%;transform:translateX(-50%) translateY(-8px);background:var(--white);border:0.5px solid var(--brown-light);min-width:180px;box-shadow:0 12px 30px rgba(44,24,16,0.12);opacity:0;visibility:hidden;transition:all 0.2s ease;padding:0.5rem 0}
+.has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown a{display:block;padding:0.6rem 1.4rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;border-bottom:none;transition:all 0.15s}
+.dropdown a:hover{background:var(--brown-pale);color:var(--red)}
+
+.page-hero{margin-top:80px;padding:4rem 3rem 3rem;background:var(--brown-pale)}
+.page-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
+.page-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2.8rem;color:var(--brown)}
+.page-sub{font-size:0.9rem;color:var(--text-mid);max-width:600px;margin-top:1rem;line-height:1.8;font-weight:300}
+.section-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--brown)}
+
+.grid-section{padding:3rem}
+.item-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.item-card{display:block;text-decoration:none;background:var(--brown-pale);overflow:hidden;cursor:pointer}
+.item-img{aspect-ratio:1/1;position:relative;overflow:hidden}
+.item-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.4s ease}
+.item-img img.shown{opacity:1}
+.item-info{padding:1.2rem}
+.item-info h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--brown);margin-bottom:0.3rem}
+.item-info span{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-mid)}
+
+footer{background:var(--text-dark);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:0.65rem;letter-spacing:0.1em;color:rgba(196,168,130,0.4);text-transform:uppercase}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(196,168,130,0.4);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--red-light)}
+
+.product-detail{display:grid;grid-template-columns:1.2fr 1fr;gap:0;margin-top:80px;min-height:560px}
+.product-gallery{position:relative}
+.product-main-img{aspect-ratio:4/3;overflow:hidden;background:var(--brown-pale)}
+.product-main-img img{width:100%;height:100%;object-fit:cover}
+.product-info-panel{padding:3rem;background:var(--brown-pale);display:flex;flex-direction:column;justify-content:center}
+.product-info-panel .page-label{margin-bottom:0.5rem}
+.product-info-panel h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--brown);margin-bottom:1rem}
+.product-info-panel p{font-size:0.9rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1.5rem}
+.product-specs{border-top:2px solid var(--red);padding-top:1.2rem;margin-top:1rem}
+.product-specs div{display:flex;justify-content:space-between;padding:0.5rem 0;font-size:0.8rem;border-bottom:0.5px solid var(--brown-light)}
+.product-specs span:first-child{color:var(--text-mid);text-transform:uppercase;letter-spacing:0.08em;font-size:0.7rem}
+.product-specs span:last-child{color:var(--brown);font-weight:500}
+.product-cta{margin-top:2rem;padding:0.9rem 2rem;background:var(--red);border:none;color:white;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;width:fit-content}
+.product-cta:hover{background:var(--red-light)}
+.back-link{display:block;padding:1.5rem 3rem 0;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);text-decoration:none;margin-top:80px}
+
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="logo"><img src="../../images/logo/logo1.png" alt="Euromobila"></a>
+  <div class="nav-links">
+    <div class="has-dropdown">
+      <a href="../colectii.html">Colecții</a>
+      <div class="dropdown">
+        <a href="../colectii.html">Colecții</a>
+        <a href="../canapele.html">Canapele</a>
+        <a href="../coltare.html">Coltare</a>
+        <a href="../fotolii.html">Fotolii</a>
+        <a href="../paturi.html">Paturi</a>
+        <a href="../mobilier.html">Mobilier</a>
+      </div>
+    </div>
+    <a href="../oferte.html">Oferte</a>
+    <a href="../despre-noi.html">Despre Noi</a>
+    <a href="../magazine.html">Magazine</a>
+    <a href="../contact.html">Contact</a>
+    <div class="nav-lang">
+      <button class="lang-btn active">RO</button>
+      <button class="lang-btn">EN</button>
+    </div>
+  </div>
+</nav>
+
+
+<a href="colectie-boston.html" class="back-link" style="margin-top:0;padding-top:1.5rem;">← Înapoi la Colecția Boston</a>
+<section class="product-detail" style="margin-top:0;">
+  <div class="product-gallery">
+    <div class="product-main-img"><img src="../../images/colectii/boston/canapea-boston1.png" alt="Canapea Boston"></div>
+  </div>
+  <div class="product-info-panel">
+    <p class="page-label">Colecția Boston · Canapele</p>
+    <h1>Canapea Boston</h1>
+    <p>Linii clasice și confort generos, canapeaua Boston este piesa centrală perfectă pentru un living elegant.</p>
+    <div class="product-specs">
+      <div><span>Material</span><span>Textil premium</span></div>
+      <div><span>Dimensiuni</span><span>230 x 95 x 88 cm</span></div>
+      <div><span>Culori disponibile</span><span>4 variante</span></div>
+      <div><span>Producție</span><span>Fabrica Euromobila, Giurgiu</span></div>
+    </div>
+    <button class="product-cta">Solicită Ofertă</button>
+  </div>
+</section>
+
+
+<footer>
+  <p>© 2025 Euromobila. Toate drepturile rezervate.</p>
+  <div class="footer-links">
+    <a href="#">Politica de confidențialitate</a>
+    <a href="#">Termeni</a>
+    <a href="#">GDPR</a>
+  </div>
+</footer>
+<script>
+// Cycle through 3 images on hover for item cards
+document.querySelectorAll('.item-card').forEach(card => {
+  const imgs = card.querySelectorAll('.item-img img');
+  if (imgs.length < 2) return;
+  let idx = 0;
+  let interval = null;
+  card.addEventListener('mouseenter', () => {
+    interval = setInterval(() => {
+      imgs[idx].classList.remove('shown');
+      idx = (idx + 1) % imgs.length;
+      imgs[idx].classList.add('shown');
+    }, 700);
+  });
+  card.addEventListener('mouseleave', () => {
+    clearInterval(interval);
+    imgs.forEach((img,i) => img.classList.toggle('shown', i===0));
+    idx = 0;
+  });
+});
+</script>
+
+</body>
+</html>

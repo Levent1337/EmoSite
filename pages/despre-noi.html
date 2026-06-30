@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --brown:#4A2E1A;--brown-mid:#7A4F34;--brown-light:#C4A882;--brown-pale:#F5EFE6;
+  --white:#FDFAF6;--red:#8B1A1A;--red-light:#C0392B;--text-dark:#2C1810;--text-mid:#6B4C38;
+}
+body{background:var(--white);font-family:'Jost',sans-serif;color:var(--text-dark);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(253,250,246,0.95);border-bottom:0.5px solid var(--brown-light);backdrop-filter:blur(8px)}
+.logo img{height:52px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links a{text-decoration:none;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-mid);font-weight:400;transition:color 0.2s;padding-bottom:3px;border-bottom:1.5px solid transparent}
+.nav-links a:hover,.nav-links a.active{color:var(--red);border-bottom-color:var(--red)}
+.nav-lang{display:flex;gap:0.5rem;margin-left:1rem;border-left:0.5px solid var(--brown-light);padding-left:1.5rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--brown-light);font-family:'Jost',sans-serif;padding:2px 4px}
+.lang-btn.active{color:var(--red);border-bottom:1.5px solid var(--red)}
+.page-hero{margin-top:80px;padding:4rem 3rem 3rem;background:var(--brown-pale)}
+.page-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
+.page-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2.8rem;color:var(--brown)}
+.page-sub{font-size:0.9rem;color:var(--text-mid);max-width:600px;margin-top:1rem;line-height:1.8;font-weight:300}
+.section-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--brown)}
+footer{background:var(--text-dark);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:0.65rem;letter-spacing:0.1em;color:rgba(196,168,130,0.4);text-transform:uppercase}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(196,168,130,0.4);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--red-light)}
+
+.about-detail{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:420px}
+.about-detail-img{position:relative;overflow:hidden;min-height:380px}
+.about-detail-img img{width:100%;height:100%;object-fit:cover;display:block}
+.about-detail-content{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--brown-pale)}
+.about-detail-content p{font-size:0.9rem;line-height:1.9;color:var(--text-mid);margin-bottom:1rem;font-weight:300}
+.values-section{padding:4rem 3rem;background:var(--white)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+.value-card{padding:2rem;border-top:2px solid var(--red)}
+.value-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--brown);margin-bottom:0.6rem}
+.value-card p{font-size:0.85rem;color:var(--text-mid);line-height:1.7;font-weight:300}
+
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo"><img src="../images/logo/logo1.png" alt="Euromobila"></a>
+  <div class="nav-links">
+    <a href="colectii.html">Colecții</a>
+    <a href="oferte.html">Oferte</a>
+    <a href="despre-noi.html" class="active">Despre Noi</a>
+    <a href="magazine.html">Magazine</a>
+    <a href="contact.html">Contact</a>
+    <div class="nav-lang">
+      <button class="lang-btn active">RO</button>
+      <button class="lang-btn">EN</button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <p class="page-label">Povestea Noastră</p>
+  <h1 class="page-title">Despre Euromobila</h1>
+  <p class="page-sub">De peste 20 de ani, transformăm materiale de calitate în mobilier care devine parte din povestea fiecărei case.</p>
+</section>
+<section class="about-detail">
+  <div class="about-detail-img"><img src="../images/about/about.png" alt="Fabrica Euromobila"></div>
+  <div class="about-detail-content">
+    <h2 class="section-title" style="font-size:2rem;margin-bottom:1.2rem;">Fabricată în Giurgiu, prezentă în toată țara</h2>
+    <p>Euromobila a pornit ca o fabrică locală în Giurgiu și a crescut într-un brand recunoscut, cu 5 magazine proprii în București și o rețea extinsă de francize în toată România.</p>
+    <p>Fiecare canapea și pat este realizat în fabrica proprie, cu atenție la fiecare cusătură. Completăm gama cu mobilier din lemn și saltele de la parteneri de încredere.</p>
+  </div>
+</section>
+<section class="values-section">
+  <p class="section-label">Ce ne reprezintă</p>
+  <h2 class="section-title" style="font-size:2rem;">Valorile Noastre</h2>
+  <div class="values-grid">
+    <div class="value-card"><h3>Calitate</h3><p>Materiale premium și control riguros la fiecare etapă de producție.</p></div>
+    <div class="value-card"><h3>Tradiție</h3><p>Peste 20 de ani de experiență în manufactura de mobilier textil.</p></div>
+    <div class="value-card"><h3>Apropiere</h3><p>O rețea de magazine și francize aproape de fiecare client din România.</p></div>
+  </div>
+</section>
+
+
+<footer>
+  <p>© 2025 Euromobila. Toate drepturile rezervate.</p>
+  <div class="footer-links">
+    <a href="#">Politica de confidențialitate</a>
+    <a href="#">Termeni</a>
+    <a href="#">GDPR</a>
+  </div>
+</footer>
+
+</body>
+</html>

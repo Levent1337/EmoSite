@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --brown:#4A2E1A;
+  --brown-mid:#7A4F34;
+  --brown-light:#C4A882;
+  --brown-pale:#F5EFE6;
+  --white:#FDFAF6;
+  --red:#8B1A1A;
+  --red-light:#C0392B;
+  --text-dark:#2C1810;
+  --text-mid:#6B4C38;
+}
+body{background:var(--white);font-family:'Jost',sans-serif;color:var(--text-dark);overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 3rem;
+  background:rgba(253,250,246,0.95);
+  border-bottom:0.5px solid var(--brown-light);
+  backdrop-filter:blur(8px);
+}
+.logo{display:flex;align-items:center}
+.logo img{height:52px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links a{text-decoration:none;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-mid);font-weight:400;transition:color 0.2s;padding-bottom:3px;border-bottom:1.5px solid transparent}
+.nav-links a:hover{color:var(--red);border-bottom-color:var(--red)}
+.nav-lang{display:flex;gap:0.5rem;margin-left:1rem;border-left:0.5px solid var(--brown-light);padding-left:1.5rem}
+.has-dropdown{position:relative}
+.dropdown{position:absolute;top:calc(100% + 1.2rem);left:50%;transform:translateX(-50%) translateY(-8px);background:var(--white);border:0.5px solid var(--brown-light);min-width:180px;box-shadow:0 12px 30px rgba(44,24,16,0.12);opacity:0;visibility:hidden;transition:all 0.2s ease;padding:0.5rem 0}
+.has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown a{display:block;padding:0.6rem 1.4rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;border-bottom:none;transition:all 0.15s}
+.dropdown a:hover{background:var(--brown-pale);color:var(--red)}
+.lang-btn{background:none;border:none;cursor:pointer;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--brown-light);font-family:'Jost',sans-serif;padding:2px 4px}
+.lang-btn.active{color:var(--red);border-bottom:1.5px solid var(--red)}
+
+.hero{position:relative;height:70vh;min-height:480px;overflow:hidden;margin-top:80px}
+.hero-slides{display:flex;width:300%;height:100%;transition:transform 0.9s cubic-bezier(0.77,0,0.175,1)}
+.hero-slide{width:33.333%;height:100%;position:relative;display:flex;align-items:flex-end;padding:3.5rem 3rem}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.slide-1 .slide-bg{background:url('../images/hero/hero1.png') center/cover no-repeat}
+.slide-2 .slide-bg{background:url('../images/hero/hero2.png') center/cover no-repeat}
+.slide-3 .slide-bg{background:url('../images/hero/hero3.png') center/cover no-repeat}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,0.85) 0%,rgba(20,10,5,0.2) 60%,transparent 100%)}
+.slide-content{position:relative;z-index:2;max-width:600px}
+.slide-tag{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red-light);margin-bottom:0.8rem;display:block}
+.slide-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:1rem}
+.slide-title em{font-style:italic;color:var(--brown-light)}
+.slide-cta{display:inline-flex;align-items:center;gap:0.8rem;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);text-decoration:none;border-bottom:1.5px solid var(--red);padding-bottom:4px;transition:all 0.2s}
+.slide-cta:hover{color:var(--red-light);gap:1.2rem}
+
+.hero-dots{position:absolute;bottom:2rem;right:3rem;z-index:10;display:flex;gap:8px}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:all 0.3s;border:none}
+.dot.active{background:var(--red);width:20px;border-radius:3px}
+
+.section-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--brown)}
+
+.categories{padding:5rem 3rem;background:var(--white)}
+.cat-header{margin-bottom:3rem}
+.cat-header .section-title{font-size:2rem}
+.cat-header .section-title span{border-bottom:2px solid var(--red);padding-bottom:2px}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.cat-card{position:relative;overflow:hidden;cursor:pointer;background:var(--brown-pale);display:block;text-decoration:none}
+.cat-card-inner{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;position:relative;overflow:hidden}
+.cat-card-bg{position:absolute;inset:0;transition:transform 0.6s ease}
+.cat-card:hover .cat-card-bg{transform:scale(1.05)}
+.cat-c1 .cat-card-bg{background:url('../images/colectii/colectii1.png') center/cover no-repeat}
+.cat-c2 .cat-card-bg{background:url('../images/colectii/colectii2.png') center/cover no-repeat}
+.cat-c3 .cat-card-bg{background:url('../images/colectii/colectii3.png') center/cover no-repeat}
+.cat-c4 .cat-card-bg{background:url('../images/colectii/colectii4.png') center/cover no-repeat}
+.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,0.8) 0%,transparent 60%)}
+.cat-card:hover .cat-overlay::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red)}
+.cat-label{position:relative;z-index:2}
+.cat-label span{display:block;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown-light);margin-bottom:0.3rem}
+.cat-label h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--white)}
+.cat-accent{position:absolute;top:1.2rem;right:1.2rem;width:28px;height:28px;border:0.5px solid rgba(255,255,255,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;font-size:1rem;color:rgba(255,255,255,0.5)}
+
+.about-section{display:grid;grid-template-columns:1fr 1fr;min-height:460px;background:var(--brown-pale)}
+.about-image{position:relative;overflow:hidden;min-height:380px}
+.about-img-bg{position:absolute;inset:0;background:url('../images/about/about.png') center/cover no-repeat}
+.about-img-pattern{position:absolute;inset:0;opacity:0.15;background-image:repeating-linear-gradient(45deg,var(--brown) 0,var(--brown) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.about-img-label{position:absolute;bottom:2rem;left:2rem;font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(255,255,255,0.15);line-height:1;font-style:italic}
+.about-content{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.about-content .section-title{font-size:2.2rem;margin-bottom:1.5rem;line-height:1.2}
+.about-content .section-title em{font-style:italic;color:var(--red);border-bottom:2px solid var(--red)}
+.about-content p{font-size:0.9rem;line-height:1.9;color:var(--text-mid);margin-bottom:1rem;font-weight:300}
+.about-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:2px solid var(--red)}
+.stat-item{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--red)}
+.stat-desc{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-mid)}
+
+.stores-section{padding:5rem 3rem;background:var(--white)}
+.stores-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem}
+.stores-header .section-title{font-size:2rem}
+.see-all{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:1.5px solid var(--red);padding-bottom:2px}
+.stores-slider{display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:1rem;scrollbar-width:thin;scrollbar-color:var(--red) transparent}
+.stores-slider::-webkit-scrollbar{height:2px}
+.stores-slider::-webkit-scrollbar-track{background:transparent}
+.stores-slider::-webkit-scrollbar-thumb{background:var(--red)}
+.store-card{min-width:240px;flex-shrink:0}
+.store-card-img{aspect-ratio:4/3;position:relative;overflow:hidden;margin-bottom:1rem}
+.store-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.sc-bg-1{background:linear-gradient(135deg,#7A5030 0%,#4A2E1A 100%)}
+.sc-bg-2{background:linear-gradient(135deg,#6B4030 0%,#3A2010 100%)}
+.sc-bg-3{background:linear-gradient(135deg,#8B6040 0%,#5C3A20 100%)}
+.sc-bg-4{background:linear-gradient(135deg,#5C3A20 0%,#2C1810 100%)}
+.sc-bg-5{background:linear-gradient(135deg,#9B7050 0%,#6B4030 100%)}
+.store-card-img-bg{position:absolute;inset:0}
+.store-pin{position:absolute;top:1rem;left:1rem;background:var(--red);color:white;font-size:0.6rem;font-weight:500;letter-spacing:0.1em;padding:3px 8px;text-transform:uppercase}
+.store-city{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--brown);margin-bottom:0.3rem}
+.store-type{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-mid)}
+.store-type.own{color:var(--red)}
+
+.newsletter{background:var(--brown);padding:4rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:3rem}
+.nl-text .section-label{color:var(--red-light)}
+.nl-text .section-title{font-size:1.8rem;color:var(--white);margin-top:0.3rem}
+.nl-form{display:flex;gap:0;flex:0 0 420px;max-width:100%}
+.nl-form input{flex:1;padding:0.9rem 1.2rem;background:rgba(255,255,255,0.08);border:0.5px solid rgba(196,168,130,0.4);border-right:none;color:var(--white);font-family:'Jost',sans-serif;font-size:0.8rem;outline:none;letter-spacing:0.05em}
+.nl-form input::placeholder{color:rgba(196,168,130,0.5)}
+.nl-form button{padding:0.9rem 1.5rem;background:var(--red);border:none;color:var(--white);font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.nl-form button:hover{background:var(--red-light)}
+
+footer{background:var(--text-dark);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:0.65rem;letter-spacing:0.1em;color:rgba(196,168,130,0.4);text-transform:uppercase}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(196,168,130,0.4);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--red-light)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="../images/logo/logo1.png" alt="Euromobila">
+  </div>
+  <div class="nav-links">
+    <div class="has-dropdown">
+      <a href="colectii.html">Colecții</a>
+      <div class="dropdown">
+        <a href="colectii.html">Colecții</a>
+        <a href="canapele.html">Canapele</a>
+        <a href="coltare.html">Coltare</a>
+        <a href="fotolii.html">Fotolii</a>
+        <a href="paturi.html">Paturi</a>
+        <a href="mobilier.html">Mobilier</a>
+      </div>
+    </div>
+    <a href="oferte.html">Oferte</a>
+    <a href="despre-noi.html">Despre Noi</a>
+    <a href="magazine.html">Magazine</a>
+    <a href="contact.html">Contact</a>
+    <div class="nav-lang">
+      <button class="lang-btn active">RO</button>
+      <button class="lang-btn">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide slide-1">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">Colecția 2025</span>
+        <h1 class="slide-title">Sofale care <em>redefinesc</em> confortul</h1>
+        <a href="colectii.html" class="slide-cta">Descoperă Colecția →</a>
+      </div>
+    </div>
+    <div class="hero-slide slide-2">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">Fabricat în România</span>
+        <h1 class="slide-title">Paturi cu <em>eleganță</em> fără compromis</h1>
+        <a href="colectii.html" class="slide-cta">Vezi Paturi →</a>
+      </div>
+    </div>
+    <div class="hero-slide slide-3">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">Ofertă Specială</span>
+        <h1 class="slide-title">Mobila ta, <em>povestea</em> ta</h1>
+        <a href="oferte.html" class="slide-cta">Oferte Active →</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-dots">
+    <button class="dot active" onclick="goSlide(0)"></button>
+    <button class="dot" onclick="goSlide(1)"></button>
+    <button class="dot" onclick="goSlide(2)"></button>
+  </div>
+</div>
+
+<section class="categories">
+  <div class="cat-header">
+    <p class="section-label">Explorează</p>
+    <h2 class="section-title"><span>Colecțiile</span> Noastre</h2>
+  </div>
+  <div class="cat-grid">
+    <a href="canapele.html" class="cat-card cat-c1">
+      <div class="cat-card-inner">
+        <div class="cat-card-bg"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span>Textile premium</span>
+          <h3>Canapele</h3>
+        </div>
+        <div class="cat-accent">→</div>
+      </div>
+    </a>
+    <a href="coltare.html" class="cat-card cat-c2">
+      <div class="cat-card-inner">
+        <div class="cat-card-bg"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span>Spațiu maximizat</span>
+          <h3>Coltare</h3>
+        </div>
+        <div class="cat-accent">→</div>
+      </div>
+    </a>
+    <a href="paturi.html" class="cat-card cat-c3">
+      <div class="cat-card-inner">
+        <div class="cat-card-bg"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span>Design & confort</span>
+          <h3>Paturi</h3>
+        </div>
+        <div class="cat-accent">→</div>
+      </div>
+    </a>
+    <a href="mobilier.html" class="cat-card cat-c4">
+      <div class="cat-card-inner">
+        <div class="cat-card-bg"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span>Lemn & textile</span>
+          <h3>Mobilier</h3>
+        </div>
+        <div class="cat-accent">→</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-image">
+    <div class="about-img-bg"></div>
+    <div class="about-img-pattern"></div>
+    <div class="about-img-label">Fabricat<br>cu pasiune</div>
+  </div>
+  <div class="about-content">
+    <p class="section-label">Povestea noastră</p>
+    <h2 class="section-title">Calitate creată<br><em>în România</em></h2>
+    <p>Cu fabrica proprie în Giurgiu și 5 magazine în București, Euromobila este prezentă în toată România printr-o rețea extinsă de francize. Fiecare piesă este concepută cu atenție la detalii, folosind textile premium și materiale durabile.</p>
+    <p>Pe lângă colecțiile proprii de canapele și paturi, oferim mobilier din lemn și saltele de înaltă calitate de la parteneri selecționați.</p>
+    <div class="about-stats">
+      <div class="stat-item">
+        <span class="stat-num">20+</span>
+        <span class="stat-desc">Ani experiență</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">5</span>
+        <span class="stat-desc">Magazine București</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1</span>
+        <span class="stat-desc">Fabrică · Giurgiu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stores-section">
+  <div class="stores-header">
+    <div>
+      <p class="section-label">Găsește-ne</p>
+      <h2 class="section-title">Magazine Proprii</h2>
+    </div>
+    <a href="magazine.html" class="see-all">Vezi toate locațiile →</a>
+  </div>
+  <div class="stores-slider">
+    <div class="store-card">
+      <div class="store-card-img">
+        <img src="../images/magazine/magazin1.png" alt="Magazin București 1">
+        <div class="store-pin">București · Sector 1</div>
+      </div>
+      <div class="store-city">București — Floreasca</div>
+      <div class="store-type own">Magazin Propriu · Flagship</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img">
+        <img src="../images/magazine/magazin2.png" alt="Magazin București 2">
+        <div class="store-pin">București · Sector 3</div>
+      </div>
+      <div class="store-city">București — Titan</div>
+      <div class="store-type own">Magazin Propriu</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img">
+        <img src="../images/magazine/magazin3.png" alt="Magazin București 3">
+        <div class="store-pin">București · Sector 6</div>
+      </div>
+      <div class="store-city">București — Militari</div>
+      <div class="store-type own">Magazin Propriu</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img">
+        <img src="../images/magazine/magazin4.png" alt="Magazin București 4">
+        <div class="store-pin">București · Sector 2</div>
+      </div>
+      <div class="store-city">București — Colentina</div>
+      <div class="store-type own">Magazin Propriu</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img">
+        <img src="../images/magazine/magazin5.png" alt="Magazin București 5">
+        <div class="store-pin">București · Sector 4</div>
+      </div>
+      <div class="store-city">București — Berceni</div>
+      <div class="store-type own">Magazin Propriu</div>
+    </div>
+  </div>
+</section>
+
+<section class="stores-section" style="background:var(--brown-pale)">
+  <div class="stores-header">
+    <div>
+      <p class="section-label">Rețeaua Noastră</p>
+      <h2 class="section-title">Francize</h2>
+    </div>
+    <a href="magazine.html" class="see-all">Vezi toate francizele →</a>
+  </div>
+  <div class="stores-slider">
+    <div class="store-card">
+      <div class="store-card-img sc-bg-1">
+        <div class="store-card-img-bg"></div>
+        <div class="store-pin">Franciză</div>
+      </div>
+      <div class="store-city">Cluj-Napoca</div>
+      <div class="store-type">Franciză</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img sc-bg-2">
+        <div class="store-card-img-bg"></div>
+        <div class="store-pin">Franciză</div>
+      </div>
+      <div class="store-city">Timișoara</div>
+      <div class="store-type">Franciză</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img sc-bg-3">
+        <div class="store-card-img-bg"></div>
+        <div class="store-pin">Franciză</div>
+      </div>
+      <div class="store-city">Iași</div>
+      <div class="store-type">Franciză</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img sc-bg-4">
+        <div class="store-card-img-bg"></div>
+        <div class="store-pin">Franciză</div>
+      </div>
+      <div class="store-city">Brașov</div>
+      <div class="store-type">Franciză</div>
+    </div>
+    <div class="store-card">
+      <div class="store-card-img sc-bg-5">
+        <div class="store-card-img-bg"></div>
+        <div class="store-pin">Franciză</div>
+      </div>
+      <div class="store-city">Constanța</div>
+      <div class="store-type">Franciză</div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="nl-text">
+    <p class="section-label">Rămâi conectat</p>
+    <h2 class="section-title">Oferte & Noutăți</h2>
+  </div>
+  <div class="nl-form">
+    <input type="email" placeholder="Adresa ta de email...">
+    <button>Abonează-te</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Euromobila. Toate drepturile rezervate.</p>
+  <div class="footer-links">
+    <a href="#">Politica de confidențialitate</a>
+    <a href="#">Termeni</a>
+    <a href="#">GDPR</a>
+  </div>
+</footer>
+
+<script>
+// (no image format detection needed — all images are .png)
+
+let cur=0;
+const slides=document.getElementById('heroSlides');
+const dots=document.querySelectorAll('.dot');
+function goSlide(n){
+  cur=n;
+  slides.style.transform=`translateX(-${n*33.333}%)`;
+  dots.forEach((d,i)=>d.classList.toggle('active',i===n));
+}
+setInterval(()=>goSlide((cur+1)%3),5000);
+document.querySelectorAll('.lang-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.lang-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
