@@ -21,14 +21,14 @@ body{background:var(--white);font-family:'Jost',sans-serif;color:var(--text-dark
 
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.2rem 3rem;
+  display:flex;align-items:stretch;justify-content:space-between;
+  padding:0 3rem 0 0;
   background:rgba(253,250,246,0.95);
   border-bottom:0.5px solid var(--brown-light);
   backdrop-filter:blur(8px);
 }
-.logo{display:flex;align-items:center}
-.logo img{height:52px;width:auto;display:block}
+.logo{display:flex;align-items:stretch;overflow:hidden}
+.logo img{height:80px;width:auto;display:block;object-fit:cover}
 .nav-links{display:flex;align-items:center;gap:2.5rem}
 .nav-links a{text-decoration:none;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-mid);font-weight:400;transition:color 0.2s;padding-bottom:3px;border-bottom:1.5px solid transparent}
 .nav-links a:hover{color:var(--red);border-bottom-color:var(--red)}
