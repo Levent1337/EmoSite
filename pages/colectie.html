@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<base href="/EmoSite/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colecție · Euromobila</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/EmoSite/css/style.css">
 <style>
 .back-link{display:block;padding:1.5rem 3rem 0;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);text-decoration:none;margin-top:80px}
 .collection-hero{position:relative;height:50vh;min-height:360px;overflow:hidden}
@@ -19,7 +18,7 @@
 </head>
 <body>
 <div id="nav-placeholder"></div>
-<script src="/js/nav.js"></script>
+<script src="/EmoSite/js/nav.js"></script>
 
 <a href="/EmoSite/pages/colectii.html" class="back-link">← Înapoi la Colecții</a>
 <div id="collection-hero" class="collection-hero" style="display:none">
@@ -49,7 +48,7 @@
 <script>
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
-if (!id) { window.location.href = '/pages/colectii.html'; }
+if (!id) { window.location.href = '/EmoSite/pages/colectii.html'; }
 else {
   fetch('/EmoSite/data/' + id + '.json')
     .then(r => { if(!r.ok) throw new Error(); return r.json(); })
@@ -62,7 +61,7 @@ else {
       document.getElementById('col-description').textContent = col.description;
       const grid = document.getElementById('product-grid');
       col.products.forEach(p => {
-        grid.innerHTML += '<a href="/pages/produs.html?collection=' + col.id + '&id=' + p.id + '" class="item-card"><div class="item-img"><img src="/images/colectii/' + p.img + '.png" alt="' + p.title + '" class="shown"></div><div class="item-info"><h3>' + p.title + '</h3><span>' + p.label + '</span></div></a>';
+        grid.innerHTML += '<a href="/EmoSite/pages/produs.html?collection=' + col.id + '&id=' + p.id + '" class="item-card"><div class="item-img"><img src="/EmoSite/images/colectii/' + p.img + '.png" alt="' + p.title + '" class="shown"></div><div class="item-info"><h3>' + p.title + '</h3><span>' + p.label + '</span></div></a>';
       });
     })
     .catch(() => { document.getElementById('not-found').style.display = ''; });
