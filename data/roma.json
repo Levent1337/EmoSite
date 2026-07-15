@@ -1,0 +1,53 @@
+{
+  "id": "roma",
+  "name": "Roma",
+  "description": "Colecția Roma — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "roma/cover",
+  "products": [
+    {
+      "id": "canapea-roma",
+      "title": "Canapea Roma",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "roma/canapea-roma",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-roma",
+      "title": "Coltar Roma",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "roma/coltar-roma",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-roma",
+      "title": "Fotoliu Roma",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "roma/fotoliu-roma",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

@@ -3,135 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coltare · Euromobila</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --brown:#4A2E1A;--brown-mid:#7A4F34;--brown-light:#C4A882;--brown-pale:#F5EFE6;
-  --white:#FDFAF6;--red:#8B1A1A;--red-light:#C0392B;--text-dark:#2C1810;--text-mid:#6B4C38;
-}
-body{background:var(--white);font-family:'Jost',sans-serif;color:var(--text-dark);overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:stretch;justify-content:space-between;padding:0 3rem 0 0;background:rgba(253,250,246,0.95);border-bottom:0.5px solid var(--brown-light);backdrop-filter:blur(8px)}
-.logo img{height:80px;width:auto;display:block;object-fit:cover}
-.nav-links{display:flex;align-items:center;gap:2.5rem}
-.nav-links>a{text-decoration:none;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-mid);font-weight:400;transition:color 0.2s;padding-bottom:3px;border-bottom:1.5px solid transparent}
-.nav-links>a:hover,.nav-links>a.active{color:var(--red);border-bottom-color:var(--red)}
-.nav-lang{display:flex;gap:0.5rem;margin-left:1rem;border-left:0.5px solid var(--brown-light);padding-left:1.5rem}
-.lang-btn{background:none;border:none;cursor:pointer;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--brown-light);font-family:'Jost',sans-serif;padding:2px 4px}
-.lang-btn.active{color:var(--red);border-bottom:1.5px solid var(--red)}
-
-.has-dropdown{position:relative}
-.dropdown{position:absolute;top:calc(100% + 1.2rem);left:50%;transform:translateX(-50%) translateY(-8px);background:var(--white);border:0.5px solid var(--brown-light);min-width:180px;box-shadow:0 12px 30px rgba(44,24,16,0.12);opacity:0;visibility:hidden;transition:all 0.2s ease;padding:0.5rem 0}
-.has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.dropdown a{display:block;padding:0.6rem 1.4rem;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-mid);text-decoration:none;border-bottom:none;transition:all 0.15s}
-.dropdown a:hover{background:var(--brown-pale);color:var(--red)}
-
-.page-hero{margin-top:80px;padding:4rem 3rem 3rem;background:var(--brown-pale)}
-.page-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
-.page-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:2.8rem;color:var(--brown)}
-.page-sub{font-size:0.9rem;color:var(--text-mid);max-width:600px;margin-top:1rem;line-height:1.8;font-weight:300}
-.section-label{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:0.5rem}
-.section-title{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--brown)}
-
-.grid-section{padding:3rem}
-.item-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.item-card{display:block;text-decoration:none;background:var(--brown-pale);overflow:hidden;cursor:pointer}
-.item-img{aspect-ratio:1/1;position:relative;overflow:hidden}
-.item-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.4s ease}
-.item-img img.shown{opacity:1}
-.item-info{padding:1.2rem}
-.item-info h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--brown);margin-bottom:0.3rem}
-.item-info span{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-mid)}
-
-footer{background:var(--text-dark);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center}
-footer p{font-size:0.65rem;letter-spacing:0.1em;color:rgba(196,168,130,0.4);text-transform:uppercase}
-.footer-links{display:flex;gap:2rem}
-.footer-links a{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(196,168,130,0.4);text-decoration:none;transition:color 0.2s}
-.footer-links a:hover{color:var(--red-light)}
-.grid-section h2{font-size:1.8rem;margin-bottom:2rem}
-</style>
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<nav>
-  <a href="index.html" class="logo"><img src="../images/logo/logo1.png" alt="Euromobila"></a>
-  <div class="nav-links">
-    <div class="has-dropdown">
-      <a href="colectii.html" class="active">Colecții</a>
-      <div class="dropdown">
-        <a href="colectii.html">Colecții</a>
-        <a href="canapele.html">Canapele</a>
-        <a href="coltare.html">Coltare</a>
-        <a href="fotolii.html">Fotolii</a>
-        <a href="paturi.html">Paturi</a>
-        <a href="mobilier.html">Mobilier</a>
-      </div>
-    </div>
-    <a href="oferte.html">Oferte</a>
-    <a href="despre-noi.html">Despre Noi</a>
-    <a href="magazine.html">Magazine</a>
-    <a href="contact.html">Contact</a>
-    <div class="nav-lang">
-      <button class="lang-btn active">RO</button>
-      <button class="lang-btn">EN</button>
-    </div>
-  </div>
-</nav>
-
+<div id="nav-placeholder"></div>
+<script src="/js/nav.js"></script>
 
 <section class="page-hero">
   <p class="page-label">Colecții</p>
   <h1 class="page-title">Coltare</h1>
-  <p class="page-sub">Răsfoiește gama completă de coltare, disponibilă în magazinele și francizele Euromobila.</p>
+  <p class="page-sub">Răsfoiește gama completă de coltare Euromobila.</p>
 </section>
 <section class="grid-section">
-  <div class="item-grid"><a href="boston/coltar-boston1.html" class="item-card">
-      <div class="item-img"><img src="../images/colectii/boston/coltar-boston1.png" alt="Coltar Boston I" class="shown"></div>
-      <div class="item-info"><h3>Coltar Boston I</h3><span>Spațiu maximizat</span></div>
-    </a><a href="boston/coltarextensibil-boston.html" class="item-card">
-      <div class="item-img"><img src="../images/colectii/boston/coltarextensibil-boston.png" alt="Coltar Boston II" class="shown"></div>
-      <div class="item-info"><h3>Coltar Boston II</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar3.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar3-1.png" alt="Model Como" class="shown"><img src="../images/produse/coltare/coltar3-2.png" alt="Model Como" class=""><img src="../images/produse/coltare/coltar3-3.png" alt="Model Como" class=""></div>
-      <div class="item-info"><h3>Model Como</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar4.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar4-1.png" alt="Model Dora" class="shown"><img src="../images/produse/coltare/coltar4-2.png" alt="Model Dora" class=""><img src="../images/produse/coltare/coltar4-3.png" alt="Model Dora" class=""></div>
-      <div class="item-info"><h3>Model Dora</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar5.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar5-1.png" alt="Model Elba" class="shown"><img src="../images/produse/coltare/coltar5-2.png" alt="Model Elba" class=""><img src="../images/produse/coltare/coltar5-3.png" alt="Model Elba" class=""></div>
-      <div class="item-info"><h3>Model Elba</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar6.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar6-1.png" alt="Model Faro" class="shown"><img src="../images/produse/coltare/coltar6-2.png" alt="Model Faro" class=""><img src="../images/produse/coltare/coltar6-3.png" alt="Model Faro" class=""></div>
-      <div class="item-info"><h3>Model Faro</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar7.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar7-1.png" alt="Model Gala" class="shown"><img src="../images/produse/coltare/coltar7-2.png" alt="Model Gala" class=""><img src="../images/produse/coltare/coltar7-3.png" alt="Model Gala" class=""></div>
-      <div class="item-info"><h3>Model Gala</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar8.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar8-1.png" alt="Model Helio" class="shown"><img src="../images/produse/coltare/coltar8-2.png" alt="Model Helio" class=""><img src="../images/produse/coltare/coltar8-3.png" alt="Model Helio" class=""></div>
-      <div class="item-info"><h3>Model Helio</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar9.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar9-1.png" alt="Model Ines" class="shown"><img src="../images/produse/coltare/coltar9-2.png" alt="Model Ines" class=""><img src="../images/produse/coltare/coltar9-3.png" alt="Model Ines" class=""></div>
-      <div class="item-info"><h3>Model Ines</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar10.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar10-1.png" alt="Model Jana" class="shown"><img src="../images/produse/coltare/coltar10-2.png" alt="Model Jana" class=""><img src="../images/produse/coltare/coltar10-3.png" alt="Model Jana" class=""></div>
-      <div class="item-info"><h3>Model Jana</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar11.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar11-1.png" alt="Model Kira" class="shown"><img src="../images/produse/coltare/coltar11-2.png" alt="Model Kira" class=""><img src="../images/produse/coltare/coltar11-3.png" alt="Model Kira" class=""></div>
-      <div class="item-info"><h3>Model Kira</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar12.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar12-1.png" alt="Model Luna" class="shown"><img src="../images/produse/coltare/coltar12-2.png" alt="Model Luna" class=""><img src="../images/produse/coltare/coltar12-3.png" alt="Model Luna" class=""></div>
-      <div class="item-info"><h3>Model Luna</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar13.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar13-1.png" alt="Model Maro" class="shown"><img src="../images/produse/coltare/coltar13-2.png" alt="Model Maro" class=""><img src="../images/produse/coltare/coltar13-3.png" alt="Model Maro" class=""></div>
-      <div class="item-info"><h3>Model Maro</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar14.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar14-1.png" alt="Model Nora" class="shown"><img src="../images/produse/coltare/coltar14-2.png" alt="Model Nora" class=""><img src="../images/produse/coltare/coltar14-3.png" alt="Model Nora" class=""></div>
-      <div class="item-info"><h3>Model Nora</h3><span>Spațiu maximizat</span></div>
-    </a><a href="produs-coltar15.html" class="item-card">
-      <div class="item-img"><img src="../images/produse/coltare/coltar15-1.png" alt="Model Olis" class="shown"><img src="../images/produse/coltare/coltar15-2.png" alt="Model Olis" class=""><img src="../images/produse/coltare/coltar15-3.png" alt="Model Olis" class=""></div>
-      <div class="item-info"><h3>Model Olis</h3><span>Spațiu maximizat</span></div>
-    </a></div>
+  <div class="item-grid" id="product-grid" data-category="coltare">
+    <p style="color:var(--text-mid);font-size:0.9rem">Se încarcă...</p>
+  </div>
 </section>
-
 
 <footer>
   <p>© 2025 Euromobila. Toate drepturile rezervate.</p>
@@ -141,27 +30,6 @@ footer p{font-size:0.65rem;letter-spacing:0.1em;color:rgba(196,168,130,0.4);text
     <a href="#">GDPR</a>
   </div>
 </footer>
-<script>
-// Cycle through 3 images on hover for item cards
-document.querySelectorAll('.item-card').forEach(card => {
-  const imgs = card.querySelectorAll('.item-img img');
-  if (imgs.length < 2) return;
-  let idx = 0;
-  let interval = null;
-  card.addEventListener('mouseenter', () => {
-    interval = setInterval(() => {
-      imgs[idx].classList.remove('shown');
-      idx = (idx + 1) % imgs.length;
-      imgs[idx].classList.add('shown');
-    }, 700);
-  });
-  card.addEventListener('mouseleave', () => {
-    clearInterval(interval);
-    imgs.forEach((img,i) => img.classList.toggle('shown', i===0));
-    idx = 0;
-  });
-});
-</script>
-
+<script src="/js/category.js"></script>
 </body>
 </html>

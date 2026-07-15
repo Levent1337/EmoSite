@@ -1,0 +1,23 @@
+{
+  "id": "cassandra",
+  "name": "Cassandra",
+  "description": "Colecția Cassandra — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "cassandra/cover",
+  "products": [
+    {
+      "id": "canapea-cassandra",
+      "title": "Canapea Cassandra",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "cassandra/canapea-cassandra",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produs · Euromobila</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.back-link{display:block;padding:1.5rem 3rem 0;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);text-decoration:none;margin-top:80px}
+.product-detail{display:grid;grid-template-columns:1.2fr 1fr;gap:0;min-height:560px}
+.product-main-img{aspect-ratio:4/3;overflow:hidden;background:var(--brown-pale)}
+.product-main-img img{width:100%;height:100%;object-fit:cover;display:block}
+.product-info-panel{padding:3rem;background:var(--brown-pale);display:flex;flex-direction:column;justify-content:center}
+.product-info-panel h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--brown);margin-bottom:1rem}
+.product-info-panel>p{font-size:0.9rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1.5rem}
+.product-specs{border-top:2px solid var(--red);padding-top:1.2rem;margin-top:1rem}
+.product-specs div{display:flex;justify-content:space-between;padding:0.5rem 0;font-size:0.8rem;border-bottom:0.5px solid var(--brown-light)}
+.product-specs span:first-child{color:var(--text-mid);text-transform:uppercase;letter-spacing:0.08em;font-size:0.7rem}
+.product-specs span:last-child{color:var(--brown);font-weight:500}
+.product-cta{margin-top:2rem;padding:0.9rem 2rem;background:var(--red);border:none;color:white;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;width:fit-content}
+.product-cta:hover{background:var(--red-light)}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<script src="/js/nav.js"></script>
+
+<a id="back-link" href="/pages/colectii.html" class="back-link">← Înapoi</a>
+<section class="product-detail" id="product-detail" style="display:none">
+  <div class="product-gallery">
+    <div class="product-main-img"><img id="prod-img" src="" alt=""></div>
+  </div>
+  <div class="product-info-panel">
+    <p class="page-label" id="prod-label"></p>
+    <h1 id="prod-title"></h1>
+    <p id="prod-desc"></p>
+    <div class="product-specs" id="prod-specs"></div>
+    <button class="product-cta">Solicită Ofertă</button>
+  </div>
+</section>
+<div id="not-found" style="display:none;margin-top:120px;padding:4rem 3rem;text-align:center">
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brown);margin-bottom:1rem">Produsul nu a fost găsit.</h2>
+  <a href="/pages/colectii.html" style="color:var(--red)">← Înapoi la Colecții</a>
+</div>
+
+<footer>
+  <p>© 2025 Euromobila. Toate drepturile rezervate.</p>
+  <div class="footer-links">
+    <a href="#">Politica de confidențialitate</a>
+    <a href="#">Termeni</a>
+    <a href="#">GDPR</a>
+  </div>
+</footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+const colId = params.get('collection');
+const prodId = params.get('id');
+if (!colId || !prodId) { window.location.href = '/pages/colectii.html'; }
+else {
+  document.getElementById('back-link').href = '/pages/colectie.html?id=' + colId;
+  fetch('/data/' + colId + '.json')
+    .then(r => { if(!r.ok) throw new Error(); return r.json(); })
+    .then(col => {
+      const p = col.products.find(x => x.id === prodId);
+      if (!p) throw new Error();
+      document.title = p.title + ' · Euromobila';
+      document.getElementById('back-link').textContent = '← Înapoi la Colecția ' + col.name;
+      document.getElementById('prod-img').src = '/images/colectii/' + p.img + '.png';
+      document.getElementById('prod-img').alt = p.title;
+      document.getElementById('prod-label').textContent = 'Colecția ' + col.name + ' · ' + p.label;
+      document.getElementById('prod-title').textContent = p.title;
+      document.getElementById('prod-desc').textContent = col.description;
+      const specs = document.getElementById('prod-specs');
+      Object.entries(p.specs).forEach(([k,v]) => {
+        specs.innerHTML += '<div><span>' + k + '</span><span>' + v + '</span></div>';
+      });
+      document.getElementById('product-detail').style.display = '';
+    })
+    .catch(() => { document.getElementById('not-found').style.display = ''; });
+}
+</script>
+</body>
+</html>

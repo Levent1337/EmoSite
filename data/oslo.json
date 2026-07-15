@@ -1,0 +1,23 @@
+{
+  "id": "oslo",
+  "name": "Oslo",
+  "description": "Colecția Oslo — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "oslo/cover",
+  "products": [
+    {
+      "id": "pat-oslo",
+      "title": "Pat Oslo",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "oslo/pat-oslo",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

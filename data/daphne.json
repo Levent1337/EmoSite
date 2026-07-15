@@ -1,0 +1,38 @@
+{
+  "id": "daphne",
+  "name": "Daphne",
+  "description": "Colecția Daphne — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "daphne/cover",
+  "products": [
+    {
+      "id": "fotoliu-daphne",
+      "title": "Fotoliu Daphne",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "daphne/fotoliu-daphne",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "taburet-daphne",
+      "title": "Taburet Daphne",
+      "category": "mobilier",
+      "label": "Taburet",
+      "img": "daphne/taburet-daphne",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "boston",
+  "name": "Boston",
+  "description": "Colecția Boston — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "boston/cover",
+  "products": [
+    {
+      "id": "canapea-boston",
+      "title": "Canapea Boston",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "boston/canapea-boston",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-boston",
+      "title": "Coltar Boston",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "boston/coltar-boston",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltarextensibil-boston",
+      "title": "Coltar Extensibil Boston",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "boston/coltarextensibil-boston",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-boston",
+      "title": "Fotoliu Boston",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "boston/fotoliu-boston",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

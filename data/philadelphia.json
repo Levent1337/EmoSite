@@ -1,0 +1,68 @@
+{
+  "id": "philadelphia",
+  "name": "Philadelphia",
+  "description": "Colecția Philadelphia — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "philadelphia/cover",
+  "products": [
+    {
+      "id": "canapea-philadelphia",
+      "title": "Canapea Philadelphia",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "philadelphia/canapea-philadelphia",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-philadelphia",
+      "title": "Coltar Philadelphia",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "philadelphia/coltar-philadelphia",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-philadelphia",
+      "title": "Fotoliu Philadelphia",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "philadelphia/fotoliu-philadelphia",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "pat-philadelphia",
+      "title": "Pat Philadelphia",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "philadelphia/pat-philadelphia",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

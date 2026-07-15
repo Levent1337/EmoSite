@@ -1,0 +1,38 @@
+{
+  "id": "salia",
+  "name": "Salia",
+  "description": "Colecția Salia — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "salia/cover",
+  "products": [
+    {
+      "id": "canapea-salia",
+      "title": "Canapea Salia",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "salia/canapea-salia",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-salia",
+      "title": "Coltar Salia",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "salia/coltar-salia",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

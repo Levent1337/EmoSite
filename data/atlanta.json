@@ -1,0 +1,38 @@
+{
+  "id": "atlanta",
+  "name": "Atlanta",
+  "description": "Colecția Atlanta — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "atlanta/cover",
+  "products": [
+    {
+      "id": "canapea-atlanta",
+      "title": "Canapea Atlanta",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "atlanta/canapea-atlanta",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-atlanta",
+      "title": "Coltar Atlanta",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "atlanta/coltar-atlanta",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

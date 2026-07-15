@@ -1,0 +1,23 @@
+{
+  "id": "tango",
+  "name": "Tango",
+  "description": "Colecția Tango — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "tango/cover",
+  "products": [
+    {
+      "id": "pat-tango",
+      "title": "Pat Tango",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "tango/pat-tango",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

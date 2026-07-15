@@ -1,0 +1,38 @@
+{
+  "id": "macon",
+  "name": "Macon",
+  "description": "Colecția Macon — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "macon/cover",
+  "products": [
+    {
+      "id": "canapea-fixa-macon",
+      "title": "Canapea Macon",
+      "category": "canapele",
+      "label": "Canapea Fixă 2 Locuri",
+      "img": "macon/canapea-fixa-macon",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-macon",
+      "title": "Fotoliu Macon",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "macon/fotoliu-macon",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

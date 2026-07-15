@@ -1,0 +1,142 @@
+[
+  {
+    "id": "alma",
+    "name": "Alma",
+    "cover": "alma/cover"
+  },
+  {
+    "id": "atena",
+    "name": "Atena",
+    "cover": "atena/cover"
+  },
+  {
+    "id": "atlanta",
+    "name": "Atlanta",
+    "cover": "atlanta/cover"
+  },
+  {
+    "id": "boston",
+    "name": "Boston",
+    "cover": "boston/cover"
+  },
+  {
+    "id": "cassandra",
+    "name": "Cassandra",
+    "cover": "cassandra/cover"
+  },
+  {
+    "id": "charisma",
+    "name": "Charisma",
+    "cover": "charisma/cover"
+  },
+  {
+    "id": "daphne",
+    "name": "Daphne",
+    "cover": "daphne/cover"
+  },
+  {
+    "id": "dublin",
+    "name": "Dublin",
+    "cover": "dublin/cover"
+  },
+  {
+    "id": "kimo",
+    "name": "Kimo",
+    "cover": "kimo/cover"
+  },
+  {
+    "id": "macon",
+    "name": "Macon",
+    "cover": "macon/cover"
+  },
+  {
+    "id": "malibu",
+    "name": "Malibu",
+    "cover": "malibu/cover"
+  },
+  {
+    "id": "mcdou",
+    "name": "McDou",
+    "cover": "mcdou/cover"
+  },
+  {
+    "id": "modena",
+    "name": "Modena",
+    "cover": "modena/cover"
+  },
+  {
+    "id": "monaco",
+    "name": "Monaco",
+    "cover": "monaco/cover"
+  },
+  {
+    "id": "monte-carlo",
+    "name": "Monte Carlo",
+    "cover": "monte-carlo/cover"
+  },
+  {
+    "id": "monza",
+    "name": "Monza",
+    "cover": "monza/cover"
+  },
+  {
+    "id": "odessa",
+    "name": "Odessa",
+    "cover": "odessa/cover"
+  },
+  {
+    "id": "oslo",
+    "name": "Oslo",
+    "cover": "oslo/cover"
+  },
+  {
+    "id": "palas",
+    "name": "Palas",
+    "cover": "palas/cover"
+  },
+  {
+    "id": "philadelphia",
+    "name": "Philadelphia",
+    "cover": "philadelphia/cover"
+  },
+  {
+    "id": "roma",
+    "name": "Roma",
+    "cover": "roma/cover"
+  },
+  {
+    "id": "salia",
+    "name": "Salia",
+    "cover": "salia/cover"
+  },
+  {
+    "id": "samara",
+    "name": "Samara",
+    "cover": "samara/cover"
+  },
+  {
+    "id": "sara",
+    "name": "Sara",
+    "cover": "sara/cover"
+  },
+  {
+    "id": "tango",
+    "name": "Tango",
+    "cover": "tango/cover"
+  },
+  {
+    "id": "toscana",
+    "name": "Toscana",
+    "cover": "toscana/cover"
+  },
+  {
+    "id": "valera",
+    "name": "Valera",
+    "cover": "valera/cover"
+  },
+  {
+    "id": "vegas",
+    "name": "Vegas",
+    "cover": "vegas/cover"
+  }
+]

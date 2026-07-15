@@ -1,0 +1,38 @@
+{
+  "id": "palas",
+  "name": "Palas",
+  "description": "Colecția Palas — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "palas/cover",
+  "products": [
+    {
+      "id": "coltar-palas",
+      "title": "Coltar Palas",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "palas/coltar-palas",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "canapea-palas",
+      "title": "Canapea Palas",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "palas/canapea-palas",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

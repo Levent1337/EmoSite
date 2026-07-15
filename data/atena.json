@@ -1,0 +1,38 @@
+{
+  "id": "atena",
+  "name": "Atena",
+  "description": "Colecția Atena — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "atena/cover",
+  "products": [
+    {
+      "id": "canapea-atena",
+      "title": "Canapea Atena",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "atena/canapea-atena",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-ext-atena",
+      "title": "Fotoliu Extensibil Atena",
+      "category": "fotolii",
+      "label": "Fotoliu Extensibil",
+      "img": "atena/fotoliu-ext-atena",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

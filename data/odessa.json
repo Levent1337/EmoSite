@@ -1,0 +1,23 @@
+{
+  "id": "odessa",
+  "name": "Odessa",
+  "description": "Colecția Odessa — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "odessa/cover",
+  "products": [
+    {
+      "id": "canapea-odessa",
+      "title": "Canapea Odessa",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "odessa/canapea-odessa",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

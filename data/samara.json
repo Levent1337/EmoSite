@@ -1,0 +1,53 @@
+{
+  "id": "samara",
+  "name": "Samara",
+  "description": "Colecția Samara — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "samara/cover",
+  "products": [
+    {
+      "id": "canapea-samara",
+      "title": "Canapea Samara",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "samara/canapea-samara",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "taburet-samara",
+      "title": "Taburet Samara",
+      "category": "mobilier",
+      "label": "Taburet",
+      "img": "samara/taburet-samara",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "pat-samara",
+      "title": "Pat Samara",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "samara/pat-samara",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "modena",
+  "name": "Modena",
+  "description": "Colecția Modena — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "modena/cover",
+  "products": [
+    {
+      "id": "canapea-modena",
+      "title": "Canapea Modena",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "modena/canapea-modena",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

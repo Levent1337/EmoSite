@@ -1,0 +1,23 @@
+{
+  "id": "charisma",
+  "name": "Charisma",
+  "description": "Colecția Charisma — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "charisma/cover",
+  "products": [
+    {
+      "id": "canapea-charisma",
+      "title": "Canapea Charisma",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "charisma/canapea-charisma",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

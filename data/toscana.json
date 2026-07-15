@@ -1,0 +1,23 @@
+{
+  "id": "toscana",
+  "name": "Toscana",
+  "description": "Colecția Toscana — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "toscana/cover",
+  "products": [
+    {
+      "id": "canapea-toscana",
+      "title": "Canapea Toscana",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "toscana/canapea-toscana",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

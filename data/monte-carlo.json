@@ -1,0 +1,38 @@
+{
+  "id": "monte-carlo",
+  "name": "Monte Carlo",
+  "description": "Colecția Monte Carlo — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "monte-carlo/cover",
+  "products": [
+    {
+      "id": "coltar-monte-carlo",
+      "title": "Coltar Monte Carlo",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "monte-carlo/coltar-monte-carlo",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-monte-carlo",
+      "title": "Fotoliu Monte Carlo",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "monte-carlo/fotoliu-monte-carlo",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

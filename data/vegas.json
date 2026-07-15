@@ -1,0 +1,23 @@
+{
+  "id": "vegas",
+  "name": "Vegas",
+  "description": "Colecția Vegas — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "vegas/cover",
+  "products": [
+    {
+      "id": "pat-vegas",
+      "title": "Pat Vegas",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "vegas/pat-vegas",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

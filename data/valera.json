@@ -1,0 +1,38 @@
+{
+  "id": "valera",
+  "name": "Valera",
+  "description": "Colecția Valera — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "valera/cover",
+  "products": [
+    {
+      "id": "coltar-valera",
+      "title": "Coltar Valera",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "valera/coltar-valera",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "canapea-valera",
+      "title": "Canapea Valera",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "valera/canapea-valera",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

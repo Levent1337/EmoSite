@@ -1,0 +1,83 @@
+{
+  "id": "monza",
+  "name": "Monza",
+  "description": "Colecția Monza — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "monza/cover",
+  "products": [
+    {
+      "id": "canapea-monza",
+      "title": "Canapea Monza",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "monza/canapea-monza",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-monza",
+      "title": "Coltar Monza",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "monza/coltar-monza",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "canapea-xl-monza",
+      "title": "Canapea XL Monza",
+      "category": "canapele",
+      "label": "Canapea XL Extensibilă",
+      "img": "monza/canapea-xl-monza",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-monza",
+      "title": "Fotoliu Monza",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "monza/fotoliu-monza",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "pat-monza",
+      "title": "Pat Monza",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "monza/pat-monza",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

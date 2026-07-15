@@ -1,0 +1,38 @@
+{
+  "id": "dublin",
+  "name": "Dublin",
+  "description": "Colecția Dublin — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "dublin/cover",
+  "products": [
+    {
+      "id": "canapea-dublin",
+      "title": "Canapea Dublin",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "dublin/canapea-dublin",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-dublin",
+      "title": "Fotoliu Dublin",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "dublin/fotoliu-dublin",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

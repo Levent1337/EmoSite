@@ -1,0 +1,23 @@
+{
+  "id": "alma",
+  "name": "Alma",
+  "description": "Colecția Alma — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "alma/cover",
+  "products": [
+    {
+      "id": "pat-alma",
+      "title": "Pat Alma",
+      "category": "paturi",
+      "label": "Pat",
+      "img": "alma/pat-alma",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

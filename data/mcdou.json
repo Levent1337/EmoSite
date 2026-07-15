@@ -1,0 +1,38 @@
+{
+  "id": "mcdou",
+  "name": "McDou",
+  "description": "Colecția McDou — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "mcdou/cover",
+  "products": [
+    {
+      "id": "canapea-fixa-mcdou",
+      "title": "Canapea McDou",
+      "category": "canapele",
+      "label": "Canapea Fixă 2 Locuri",
+      "img": "mcdou/canapea-fixa-mcdou",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-mcdou",
+      "title": "Fotoliu McDou",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "mcdou/fotoliu-mcdou",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

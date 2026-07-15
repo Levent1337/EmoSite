@@ -1,0 +1,53 @@
+{
+  "id": "malibu",
+  "name": "Malibu",
+  "description": "Colecția Malibu — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "malibu/cover",
+  "products": [
+    {
+      "id": "coltar-malibu",
+      "title": "Coltar Malibu",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "malibu/coltar-malibu",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "canapea-malibu",
+      "title": "Canapea Malibu",
+      "category": "canapele",
+      "label": "Canapea Extensibilă",
+      "img": "malibu/canapea-malibu",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "fotoliu-malibu",
+      "title": "Fotoliu Malibu",
+      "category": "fotolii",
+      "label": "Fotoliu",
+      "img": "malibu/fotoliu-malibu",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

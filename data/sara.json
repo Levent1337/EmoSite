@@ -1,0 +1,38 @@
+{
+  "id": "sara",
+  "name": "Sara",
+  "description": "Colecția Sara — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "sara/cover",
+  "products": [
+    {
+      "id": "canapea-fixa-sara",
+      "title": "Canapea Sara",
+      "category": "canapele",
+      "label": "Canapea Fixă 2 Locuri",
+      "img": "sara/canapea-fixa-sara",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "coltar-fix-sara",
+      "title": "Coltar Fix Sara",
+      "category": "coltare",
+      "label": "Coltar Fix",
+      "img": "sara/coltar-fix-sara",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Fix",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}

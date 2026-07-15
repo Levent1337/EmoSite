@@ -1,0 +1,38 @@
+{
+  "id": "monaco",
+  "name": "Monaco",
+  "description": "Colecția Monaco — design premium realizat în fabrica Euromobila din Giurgiu.",
+  "cover": "monaco/cover",
+  "products": [
+    {
+      "id": "coltar-monaco",
+      "title": "Coltar Monaco",
+      "category": "coltare",
+      "label": "Coltar Extensibil",
+      "img": "monaco/coltar-monaco",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "Extensibil",
+        "Ladă de depozitare": "Da",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    },
+    {
+      "id": "otoman-monaco",
+      "title": "Otoman Monaco",
+      "category": "mobilier",
+      "label": "Otoman",
+      "img": "monaco/otoman-monaco",
+      "specs": {
+        "Material": "Textil premium",
+        "Mecanism": "—",
+        "Ladă de depozitare": "Nu",
+        "Dimensiuni": "— x — x — cm",
+        "Culori disponibile": "—",
+        "Producție": "Fabrica Euromobila, Giurgiu"
+      }
+    }
+  ]
+}
