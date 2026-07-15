@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+<base href="/EmoSite/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colecții · Euromobila</title>
@@ -31,7 +32,7 @@
   </div>
 </footer>
 <script>
-fetch('/data/collections.json')
+fetch('/EmoSite/data/collections.json')
   .then(r => r.json())
   .then(collections => {
     const grid = document.getElementById('collections-grid');

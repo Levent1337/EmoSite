@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+<base href="/EmoSite/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colecție · Euromobila</title>
@@ -20,7 +21,7 @@
 <div id="nav-placeholder"></div>
 <script src="/js/nav.js"></script>
 
-<a href="/pages/colectii.html" class="back-link">← Înapoi la Colecții</a>
+<a href="/EmoSite/pages/colectii.html" class="back-link">← Înapoi la Colecții</a>
 <div id="collection-hero" class="collection-hero" style="display:none">
   <img id="hero-img" src="" alt="">
   <div class="collection-hero-overlay">
@@ -34,7 +35,7 @@
 <section class="grid-section"><div class="item-grid" id="product-grid"></div></section>
 <div id="not-found" style="display:none;margin-top:120px;padding:4rem 3rem;text-align:center">
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brown);margin-bottom:1rem">Colecția nu a fost găsită.</h2>
-  <a href="/pages/colectii.html" style="color:var(--red)">← Înapoi la Colecții</a>
+  <a href="/EmoSite/pages/colectii.html" style="color:var(--red)">← Înapoi la Colecții</a>
 </div>
 
 <footer>
@@ -50,11 +51,11 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 if (!id) { window.location.href = '/pages/colectii.html'; }
 else {
-  fetch('/data/' + id + '.json')
+  fetch('/EmoSite/data/' + id + '.json')
     .then(r => { if(!r.ok) throw new Error(); return r.json(); })
     .then(col => {
       document.title = 'Colecția ' + col.name + ' · Euromobila';
-      document.getElementById('hero-img').src = '/images/colectii/' + col.cover + '.png';
+      document.getElementById('hero-img').src = '/EmoSite/images/colectii/' + col.cover + '.png';
       document.getElementById('hero-img').alt = col.name;
       document.getElementById('hero-title').textContent = col.name;
       document.getElementById('collection-hero').style.display = '';

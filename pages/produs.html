@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+<base href="/EmoSite/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produs · Euromobila</title>
@@ -26,7 +27,7 @@
 <div id="nav-placeholder"></div>
 <script src="/js/nav.js"></script>
 
-<a id="back-link" href="/pages/colectii.html" class="back-link">← Înapoi</a>
+<a id="back-link" href="/EmoSite/pages/colectii.html" class="back-link">← Înapoi</a>
 <section class="product-detail" id="product-detail" style="display:none">
   <div class="product-gallery">
     <div class="product-main-img"><img id="prod-img" src="" alt=""></div>
@@ -41,7 +42,7 @@
 </section>
 <div id="not-found" style="display:none;margin-top:120px;padding:4rem 3rem;text-align:center">
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brown);margin-bottom:1rem">Produsul nu a fost găsit.</h2>
-  <a href="/pages/colectii.html" style="color:var(--red)">← Înapoi la Colecții</a>
+  <a href="/EmoSite/pages/colectii.html" style="color:var(--red)">← Înapoi la Colecții</a>
 </div>
 
 <footer>
@@ -58,15 +59,15 @@ const colId = params.get('collection');
 const prodId = params.get('id');
 if (!colId || !prodId) { window.location.href = '/pages/colectii.html'; }
 else {
-  document.getElementById('back-link').href = '/pages/colectie.html?id=' + colId;
-  fetch('/data/' + colId + '.json')
+  document.getElementById('back-link').href = '/EmoSite/pages/colectie.html?id=' + colId;
+  fetch('/EmoSite/data/' + colId + '.json')
     .then(r => { if(!r.ok) throw new Error(); return r.json(); })
     .then(col => {
       const p = col.products.find(x => x.id === prodId);
       if (!p) throw new Error();
       document.title = p.title + ' · Euromobila';
       document.getElementById('back-link').textContent = '← Înapoi la Colecția ' + col.name;
-      document.getElementById('prod-img').src = '/images/colectii/' + p.img + '.png';
+      document.getElementById('prod-img').src = '/EmoSite/images/colectii/' + p.img + '.png';
       document.getElementById('prod-img').alt = p.title;
       document.getElementById('prod-label').textContent = 'Colecția ' + col.name + ' · ' + p.label;
       document.getElementById('prod-title').textContent = p.title;

@@ -1,10 +1,11 @@
 (function() {
-  fetch('/pages/nav.html')
+  const base = '/EmoSite/';
+
+  fetch(base + 'pages/nav.html')
     .then(r => r.text())
     .then(html => {
       document.getElementById('nav-placeholder').innerHTML = html;
 
-      // Mark active link based on current page
       const current = window.location.pathname.split('/').pop() || 'index.html';
       document.querySelectorAll('#nav-placeholder .nav-links a, #nav-placeholder .dropdown a').forEach(a => {
         const href = a.getAttribute('href') || '';
@@ -13,7 +14,6 @@
         }
       });
 
-      // Language toggle
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.addEventListener('click', () => {
           document.querySelectorAll('.lang-btn').forEach(x => x.classList.remove('active'));
